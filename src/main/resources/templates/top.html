@@ -8,7 +8,7 @@
         <ul>
             <li th:each="pokemon : ${pokeList}">
                 <img th:src= "'http://www.pokestadium.com/assets/img/sprites/official-art/'+${pokemon}+'.png'"
-                     alt="${pokemon}" title="${pokemon}">
+                     th:alt="${pokemon}" th:title="${pokemon}">
             </li>
         </ul>
     </body>
