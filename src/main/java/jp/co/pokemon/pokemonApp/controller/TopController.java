@@ -1,7 +1,6 @@
 package jp.co.pokemon.pokemonApp.controller;
 
 import jp.co.pokemon.pokemonApp.service.TopService;
-import me.sargunvohra.lib.pokekotlin.model.NamedApiResource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
