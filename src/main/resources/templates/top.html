@@ -6,11 +6,13 @@
     </head>
     <body>
         <ul>
-            <li th:each="pokemon : ${pokeList}">
-                <td th:text = "${pokemon}"></td>
-                <img th:src= "'http://www.pokestadium.com/assets/img/sprites/official-art/'+${pokemon}+'.png'"
-                     th:alt="${pokemon}" th:title="${pokemon}">
+            <li th:each="i,pokemon : ${pokeList}">
+                <td th:text = "${pokemon.current}"></td>
+                <a th:href="'http://localhost:8080/poke_book/' + ${pokemon.index+1}">詳細</a>
+                <img th:src= "'http://www.pokestadium.com/assets/img/sprites/official-art/'+${pokemon.current}+'.png'"
+                     th:alt="${pokemon.current}" th:title="${pokemon.current}">
             </li>
         </ul>
+        <a></a>
     </body>
 </html>

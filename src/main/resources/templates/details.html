@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8">
+        <title>Details</title>
+    </head>
+<body>
+    <img th:src="'http://www.pokestadium.com/assets/img/sprites/official-art/' + ${pokemon.getEnglishName()} + '.png'"
+         th:alt="${pokemon.getEnglishName()}" th:title="${pokemon.getEnglishName()}">
+    <td th:text = "${pokemon.getJapaneseName()}"></td>
+    <li th:each="type : ${pokemon.getTypes()}">
+        <td th:text = "${type}"></td>
+    </li>
+    <td th:text = "'身長:' + ${pokemon.getHeight()} + 'm'"></td>
+    <td th:text = "'体重:' + ${pokemon.getWeight()} + 'kg'"></td>
+    <td th:text = "${pokemon.getFlavorText()}"></td>
+</body>
+</html>
